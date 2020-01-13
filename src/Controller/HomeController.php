@@ -22,9 +22,6 @@ class HomeController extends AbstractController
                 'ApiKey' => $_ENV['API_KEY']
             ]
         ]);
-/*        echo '<pre>';
-        var_dump(\GuzzleHttp\json_decode($response->getBody()));
-        echo '</pre>';*/
         $data = \GuzzleHttp\json_decode($response->getBody());
 
         return $this->render('home/index.html.twig', [
