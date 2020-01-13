@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello VideosController!{% endblock %}
+
+{% block body %}
+    {% for video in videos %}
+        {{ video.name }}
+        <iframe src="{{ video.videoUrl }}"></iframe>
+        {{ video.createdAt }}
+        {{ video.published }}
+        {{ video.description }}
+        {{ video.categories }}
+    {% endfor %}
+
+    {{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.createdAt) }}
+    {{ form_row(form.published) }}
+    {{ form_row(form.description) }}
+    {{ form_row(form.categories) }}
+    {{ form_end(form) }}
+{% endblock %}
