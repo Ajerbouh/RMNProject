@@ -4,12 +4,12 @@ namespace App\Controller;
 
 use App\Repository\VideosRepository;
 use GuzzleHttp\Client;
+use http\Env;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
 {
-        const API_KEY = '18f488ccdaa81d45426ea58e82fbd31a93116285e72095b1e7296156a7baa31b';
     /**
      * @Route("/home", name="home")
      */
@@ -19,7 +19,7 @@ class HomeController extends AbstractController
 
         $response = $client->request('GET', 'https://api.art.rmngp.fr/v1/works/69885', [
             'headers' => [
-                'ApiKey' => self::API_KEY
+                'ApiKey' => $_ENV['API_KEY']
             ]
         ]);
 /*        echo '<pre>';
