@@ -104,6 +104,9 @@
     "ralouphie/getallheaders": {
         "version": "3.0.3"
     },
+    "symfony/asset": {
+        "version": "v4.2.12"
+    },
     "symfony/cache": {
         "version": "v4.2.1"
     },
