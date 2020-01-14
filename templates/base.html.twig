@@ -14,6 +14,10 @@
         <div class="col s1 offset-s11">
             <a href="{{ path('logout') }}">Se déconnecter</a>
         </div>
+    {% elseif is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+        <div class="col s1 offset-s11">
+            <a href="{{ path('login') }}">Se connecter</a>
+        </div>
     {% endif %}
 </div>
 {% block body %}
