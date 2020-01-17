@@ -28,9 +28,6 @@ class UserType extends AbstractType
             ->add('firstname')
             ->add('lastname')
             ->add('email', EmailType::class)
-            ->add('birthday', \Symfony\Component\Form\Extension\Core\Type\TextType::class, [
-                'attr' => ['class' => 'datepicker'],
-            ])
             ->add('password', RepeatedType::class)
             ->add('password', RepeatedType::class, [
                 'type' => PasswordType::class,
