@@ -15,8 +15,8 @@
     {{ form_row(form.password.second) }}
     {{ form_row(form.firstname) }}
     {{ form_row(form.lastname) }}
-        {{ form_label(form.birthday) }}
-    {{ form_widget(form.birthday, {'attr': {'class': 'datepicker'}}) }}
+{#        {{ form_label(form.birthday) }}#}
+{#    {{ form_widget(form.birthday, {'attr': {'class': 'datepicker'}}) }}#}
     {{ form_end(form) }}
     </div>
 {% endblock %}
@@ -24,8 +24,8 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
-            $('.datepicker').datepicker();
-        });
+        // $(document).ready(function(){
+        //     $('.datepicker').datepicker();
+        // });
     </script>
 {% endblock %}
