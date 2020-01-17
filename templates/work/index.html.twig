@@ -15,11 +15,18 @@
 {#    </pre>#}
 
     {% for data in work.hits.hits %}
-        {{ dump(data._source.images[0].urls.original) }}
+        <pre>
+        {{ dump(data._source.images[1].urls.original) }}
+        </pre>
+        <h1>{{ data._source.authors[0].name.fr }}</h1>
+        <h2>{{ data._source.title.fr }}</h2>
+        <h3>{{ data._source.location.name.fr }}</h3>
+        <h3>{{ data._source.location.website }}</h3>
         <img src="{{ data._source.images[0].urls.original }}">
+        <p>{{ data._source.images[0].source.copyright }} - {{ data._source.images[0].photographer.name }}</p>
+        {% for image in data._source.images  %}
+            <img width="100px" height="100px" src="{{ image.urls.original }}">
+            {% endfor %}
     {% endfor %}
-    <p>
-        ID: {{ id }}
-    </p>
 </div>
 {% endblock %}
