@@ -16,7 +16,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class UserController extends AbstractController
 {
     /**
-     * @Route("/create", name="user")
+     * @Route("/user", name="user")
      * @param Request $request
      * @param UserManager $userManager
      * @param EntityManagerInterface $entityManager
